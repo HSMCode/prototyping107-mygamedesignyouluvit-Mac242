@@ -239,7 +239,7 @@ MonoBehaviour:
   foodCount: 0
   footstepsEffect: {fileID: 1190350955}
   impactEffect: {fileID: 1035247853}
-  dashSpeed: 180
+  dashSpeed: 120
   dashTime: 0
   startDashTime: 1.5
   isDashing: 0

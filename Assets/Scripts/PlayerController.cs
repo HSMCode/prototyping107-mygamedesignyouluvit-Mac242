@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
             
         {
             isDashing = true;
-            rb.velocity = new Vector2(moveDirection.x * dashSpeed, moveDirection.y * dashSpeed);
+            rb.velocity = new Vector2(moveDirection.x * (movementSpeed * dashSpeed), moveDirection.y * (movementSpeed * dashSpeed));
         }
         
     }
@@ -81,7 +81,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D (Collider2D collision){
-        if(collision.CompareTag("Food")){
+        
+         if(collision.CompareTag("Enemy"))
+            {
+              gameManager.EndGame();      
+            }
+        
+        if(collision.CompareTag("Food"))
+        {
             print("I FOUND SOME FOOD!");
 
             impactEffect.gameObject.SetActive(true);
@@ -103,8 +110,6 @@ public class PlayerController : MonoBehaviour
             }
 
             }
-
-
         }
 
     }

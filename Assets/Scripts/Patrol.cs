@@ -30,7 +30,7 @@ public float distance;
 
      transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
 
-    if(Vector2.Distance(transform.position, moveSpot.position) < 0.2f){
+    if(Vector2.Distance(transform.position, moveSpot.position) < 0.8f){
 
       if(waitTime <= 0){
         moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
